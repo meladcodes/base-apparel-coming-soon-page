@@ -1,0 +1,140 @@
+@import url(https://fonts.google.com/specimen/Josefin+Sans);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+main {
+    max-width: 52rem;
+    max-height: 20rem;
+    display: flex;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.leftSide {
+    max-width: 62%;
+    max-height: 100%;
+    padding: 1.2rem;
+    background-color: rgb(245, 236, 243);
+}
+
+.leftSide .textArea {
+    margin-top: 2rem;
+    color: hsl(0, 36%, 70%);
+    font-size: 1.2rem;
+}
+
+.textArea span {
+    color: #000;
+}
+
+.textArea p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.leftSide .inputArea {
+    width: 100%;
+    position: relative;
+}
+
+.inputArea input {
+    width: 90%;
+    height: 2.3rem;
+    border-radius: 1.2rem;
+    border: 0.06rem solid hsl(0, 46%, 86%);
+    padding: 0.62rem 0.9rem;
+    color: hsl(0, 6%, 24%);
+    background-color: transparent;
+}
+
+
+.inputArea button {
+    position: absolute;
+    top: -0.12rem;
+    right: 1.6rem;
+    height: 2.5rem;
+    width: 3.3rem;
+    outline: none;
+    border: 0;
+    border-radius: 1.25rem;
+    background: linear-gradient(to left ,#ee7c7c, hsl(0, 63%, 80%));
+    box-shadow: inset 0 0 0 1px hsl(0deg 64% 73%), 0 0 5px rgb(0 0 0 / 20%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.inputArea button:hover {
+    transform: scaleX(1);
+    background: linear-gradient(to left ,#e7b4b4, hsl(0, 63%, 80%));
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 14%);
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.rightSide {
+    max-width: 38%;
+    max-height: 100%;
+}
+
+.rightSide img {
+    height: 100%;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 30rem) {
+    body {
+        min-height: 100vh;
+        min-width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main {
+        max-height: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        max-width: 36rem;
+
+    }
+    .leftSide {
+        max-width: 100%;
+    }
+    .inputArea input {
+        max-width: 80%;
+        position: relative;
+    }
+    .leftSide {
+        max-width: 100%;
+    }
+    .rightSide {
+        max-width: 100%;
+        max-height: 50%;
+    }
+    .rightSide img {
+        min-height: 30%;
+        max-width: 100%;
+    }
+    .leftSide button {
+        position: absolute;
+        top: -0.12rem;
+        right: 3.5rem;
+    }
+}
